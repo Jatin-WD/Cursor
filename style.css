@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 500vh;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+
+
+
+
+.cur{
+    height:30px;
+    width:30px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left:0px;
+    top:0px;
+    z-index: 999999999;
+    mix-blend-mode:difference;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition:all 0.2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+p{
+    color:white;
+}
+
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.enq{
+    height:50px;
+    width: 220px;
+    background-color: rgb(59, 100, 177);
+    color: aliceblue;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    right: -85px;
+    top: 300px;
+
+    transform:rotate(-90deg);
+
+    cursor:pointer;
+}
+
+form{
+    height: 400px;
+    width: 500px;
+    background-color: rgba(180, 24, 24, 0.686);
+    backdrop-filter: blur(10px);
+    color:white;
+    position: fixed;
+    z-index:99999;
+    top: calc(50% - 200px);
+    left: calc(50% - 250px);
+
+    transform: scale(0);
+
+    transition:all 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    padding: 50px;
+}
+
+form input{
+    height: 35px;
+    padding: 0 10px;
+}
+
+form textarea{
+    height: 70px;
+    padding: 10px;
+}
+
+form input[type=button]{
+    background-color: black;
+    color: white;
+    height: 40px;
+}
+
+form .close{
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+form .close::before{
+    content: '';
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: calc(50% - 2.5px);
+    transform: rotate(45deg);
+}
+
+form .close::after{
+    content: '';
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: calc(50% - 2.5px);
+    transform: rotate(-45deg);
+}
+
+
+.content{
+    height:300px;
+    width:350px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+    position: fixed;
+    top: calc(50% - 150px);
+    left: calc(50% - 175px);
+    transform: scale(0);
+    z-index: 999999;
+    transition: all 0.5s;
+}
+
+.content .exit{
+    height: 30px;
+    width:30px;
+    border: 1px solid white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.content .exit::before{
+    content: '';
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: calc(50% - 2.5px);
+    transform: rotate(45deg);
+}
+
+.content .exit::after{
+    content: '';
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: calc(50% - 2.5px);
+    transform: rotate(-45deg);
+}
